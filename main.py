@@ -37,7 +37,7 @@ tab1, tab2, tab3 = st.tabs(["🏠 Home", "📖 About Project", "🔍 Predict"])
 with tab1:
     st.title("🍇 Fruit & Veggie Classifier")
     st.markdown("Welcome to the smart fruit & vegetable detector!")
-    image = Image.open("assets/intro.jpg")  # Put the image file in the same directory
+    image = Image.open("intro.jpg")  # Put the image file in the same directory
     st.image(image, use_column_width=True, caption=None)
 
 # Page: About
