@@ -4,16 +4,7 @@ import numpy as np
 import tensorflow as tf
 import os
 import gdown
-import streamlit as st
 
-st.set_page_config(
-    page_title="Fruit & Veggie Classifier",
-    menu_items={
-        'Get Help': None,
-        'Report a bug': None,
-        'About': None
-    }
-)
 # Check if model file already exists
 if not os.path.exists('trained_model (1).h5'):
     # If not, download it from Google Drive
