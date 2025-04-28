@@ -6,10 +6,10 @@ import os
 import gdown
 
 # Check if model file already exists
-if not os.path.exists('model.h5'):
+if not os.path.exists('trained_model (1).h5'):
     # If not, download it from Google Drive
     url = 'https://drive.google.com/uc?id=13FvRL7p6capnHKtWZn1r4dBSXKmeo1KI'
-    output = 'model.h5'
+    output = 'trained_model (1).h5'
     gdown.download(url, output, quiet=False)
 
 @st.cache_resource
