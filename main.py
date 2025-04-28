@@ -2,6 +2,16 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 import tensorflow as tf
+import os
+import gdown
+
+# Check if model file already exists
+if not os.path.exists('model.h5'):
+    # If not, download it from Google Drive
+    url = 'https://drive.google.com/uc?id=13FvRL7p6capnHKtWZn1r4dBSXKmeo1KI'
+    output = 'model.h5'
+    gdown.download(url, output, quiet=False)
+
 @st.cache_resource
 def model_prediction(uploaded_file):
     image=tf.keras.preprocessing.image.load_img(uploaded_file,target_size=(64,64))
